@@ -95,6 +95,24 @@ const getSkills = async ()=>{
     }
 }
 
+const getResearches = async ()=>{
+    try{
+        const response = await axios.get(baseURL,{
+            params:{
+                ref : await getRef(),
+                q : '[[at(document.type, "research")]]',
+                access_token : ACCESS_TOKEN
+            }
+        });
+        const researches = response.data.results;
+        console.log(researches);
+        return researches;
+    }
+    catch(e){
+        console.log(e);
+    }
+}
+
 const getEmails = async ()=>{
     try{
         const response = await axios.get(baseURL,{
@@ -135,11 +153,13 @@ module.exports = async ()=>{
     let emails = await getEmails();
     let aboutme = await getAboutMe();
     let skills = await getSkills();
+    let researches = await getResearches();
     return {
         educations,
         emails,
         aboutme,
         skills,
+        researches,
         developer
     }
 }

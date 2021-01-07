@@ -112,6 +112,26 @@ title : Dhrubajyoti Biswas
 <!-- SKILLS SECTION END -->
 
 
+<!-- RESEARCH INTEREST START -->
+<div id="tsParticles3">
+    <div class="project-container content-container">
+        <h1 class="project-header"><span>R</span>esearch Interests</h1>
+        <div class="project-content">
+            <% for(research of data.researches) {%>
+                <% research = research.data %> 
+                <div class="proj">
+                    <img src="<%= research.image.thumbnail.url %>" alt="<%= research.image.thumbnail.alt %>">
+                    <div class="proj-description">
+                        <h1><%=research.title[0].text%></h1>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+<!-- RESEARCH INTEREST END -->
+
+
 <!-- FOOTER SECTION START -->
 <footer>
     <div class="content-container footer-container">
