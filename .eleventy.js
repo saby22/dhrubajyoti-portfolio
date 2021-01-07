@@ -1,6 +1,6 @@
 module.exports = eleventyConfig => {
 
-    eleventyConfig.addPassthroughCopy("./src/icons");
+    eleventyConfig.addPassthroughCopy("./src/favicon");
     return {
         addPassthroughCopy : true,
         dataTemplateEngine: "ejs",
