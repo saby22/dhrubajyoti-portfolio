@@ -4,7 +4,8 @@
   "description": "Portfolio site generated using Eleventy for Dhrubajyoti Biswas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:site": "npx @11ty/eleventy",
+    "dev:site": "npx @11ty/eleventy --serve --watch"
   },
   "author": "Sabyasachi",
   "license": "ISC",
