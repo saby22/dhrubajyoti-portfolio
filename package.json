@@ -1,0 +1,21 @@
+{
+  "name": "dhrubajyoti98-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio site generated using Eleventy for Dhrubajyoti Biswas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sabyasachi",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "academicons": "^1.8.6",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "prismic-dom": "^2.2.4"
+  }
+}

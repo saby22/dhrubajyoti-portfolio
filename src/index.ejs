@@ -1,0 +1,154 @@
+---
+layout : base.ejs
+title : Dhrubajyoti Biswas
+---
+
+<!-- HERO SECTION START -->
+<div id="tsParticles"></div>
+<div class="header">
+
+    <h1><%=hero.name.value%></h1>
+    <p><%=hero.tagline.value%></p>
+
+    <div class="header-icons">
+        <a aria-label="<%=hero.github.aria%>" href="<%=hero.github.link%>" target="_blank">
+            <i class="<%=hero.github.icon%>"></i>
+        </a>
+        <a aria-label="<%=hero.linkedin.aria%>" href="<%=hero.linkedin.link%>" target="_blank">
+            <i class="fab <%=hero.linkedin.icon%>"></i>
+        </a>
+        <a aria-label="<%=hero.scholar.aria%>" href="<%=hero.scholar.link%>" target="_blank">
+            <i class="ai <%=hero.scholar.icon%>"></i>
+        </a>
+        <a aria-label="<%=hero.mail.aria%>" href="<%=hero.mail.link%>">
+            <i class="fas <%=hero.mail.icon%>"></i>
+        </a>
+    </div>
+
+    <div class="button-group">
+        <a aria-label="<%=hero.aboutme.aria%>" href="">
+            <button class="about-me-button">About Me</button>
+        </a>
+        <a aria-label="<%=hero.cv.aria%>" href="<%=hero.cv.link%>" target="_blank">
+            <button class="get-cv-button">Get CV</button>
+        </a>
+    </div>
+<p></p>
+</div>
+<!-- HERO SECTION END  -->
+
+
+<!-- ABOUT ME SECTION START -->
+<section class="about-me-section">
+    <div class="content-container about-me-container">
+        <div class="about-me-header">
+            <h1><span>A</span>bout Me</h1>
+        </div>
+
+        <div class="about-me-content">
+            <%for(let i=1;i<=data.aboutme.length;i++){%>
+                <%- data.aboutme[i] %> 
+            <%}%>
+            <script>
+                const images = document.getElementsByClassName("random-image");
+                const randomNumber = "image-"+ Math.floor(Math.random() * (images.length) + 1);
+                console.log(randomNumber);
+                for(image of images){
+                    if(image.id===randomNumber)
+                        continue;
+                    else
+                        image.style.display="none";
+                }
+            </script>
+            <%- data.aboutme[0] %> 
+        </div>
+    </div>
+</section>
+<!-- ABOUT ME SECTION END -->
+
+
+<!-- EDUCATION SECTION START -->
+<div id="tsParticles2">
+    <div class="content-container education-container">
+        <h1><span>E</span>ducation</h1>
+        <div class="timeline-container">
+            <%  let c = 1; %>
+                <% for(edu of data.educations){%>
+                    <div class="edu edu-<%=c%>">
+                        <div class="org-info">
+                            <p><%=edu.data.timeframe%> </p>
+                            <p class="degree"><%=edu.data.degree%></p>
+                        </div>
+                        <div class="course-info">
+                            <h2><%=edu.data.institute%></h2>
+                            <ul>
+                                <li><span><%=edu.data.bullet1header%> :</span> <%=edu.data.bullet1[0].text%></li>
+                                <li><span><%=edu.data.bullet2header%> :</span> <%=edu.data.bullet2[0].text%></li>
+                                <li><span><%=edu.data.bullet3header%> :</span> <%=edu.data.bullet3[0].text%></li>
+                            </ul>
+                        </div>
+                    </div>
+                <% c+=1;%> 
+            <%};%>    
+        </div>
+    </div>
+</div>
+<!-- EDUCATION SECTION END -->
+
+
+<!-- SKILLS SECTION START -->
+<section class="skills">
+    <div class="content-container skill-container">
+        <h1><span>S</span>kills</h1>
+        <div class="skills-logos">
+            <% for(skill of data.skills) {%>
+                <div> 
+                    <%- skill  %> 
+                </div>
+            <% } %> 
+        </div>
+    </div>
+</section>
+<!-- SKILLS SECTION END -->
+
+
+<!-- FOOTER SECTION START -->
+<footer>
+    <div class="content-container footer-container">
+        <div class="contact">
+            <h1><%=footer.col1.title%></h1>
+            <ul>
+                <% for (email of data.emails){ %> 
+                    <li><a href="mailto:<%=email.data.value%>"><%=email.data.value%></a></li>
+                <% } %> 
+            </ul>
+        </div>
+        <div class="office">
+            <h1><%=footer.col2.title%></h1>
+            <p><%=footer.col2.address%></p>
+            <p><%=footer.col2.phone%></p>
+            <div class="office-links">
+                <a aria-label="<%=footer.col2.links.gmap.aria%>" href="<%=footer.col2.links.gmap.link%>" target="_blank"><i class="fas <%=footer.col2.links.gmap.icon%>"></i></a>
+                <a aria-label="<%=footer.col2.links.website.aria%>" href="<%=footer.col2.links.website.link%>" target="_blank"><i class="fas <%=footer.col2.links.website.icon%>"></i></a>
+            </div>  
+        </div>
+        <div class="social">
+            <h1><%=footer.col3.title%></h1>
+            <div class="social-links">
+                <a aria-label="<%=footer.col3.links.instagram.aria%>" href="<%=footer.col3.links.instagram.link%>" target="_blank"><i class="fab <%=footer.col3.links.instagram.icon%>"></i></a>
+                <a aria-label="<%=footer.col3.links.twitter.aria%>" href="<%=footer.col3.links.twitter.link%>" target="_blank"><i class="fab <%=footer.col3.links.twitter.icon%>"></i></a>
+                <a aria-label="<%=footer.col3.links.facebook.aria%>" href="<%=footer.col3.links.facebook.link%>" target="_blank"><i class="fab <%=footer.col3.links.facebook.icon%>"></i></a>
+            </div>
+        </div>
+        <div class="developed-by">
+            <h1>Developed By</h1>
+            <p><%= data.developer.name %></p>
+            <p>Check Me Out @</p>
+            <div class="developer-links">
+                <a aria-label="<%=data.developer.links.github.aria%>" href="<%=data.developer.links.github.link %>" target="_blank"><i class="fab <%=data.developer.links.github.icon%>"></i></a>
+                <a aria-label="<%=data.developer.links.linkedin.aria%>" href="<%=data.developer.links.linkedin.link %>" target="_blank"><i class="fab <%=data.developer.links.linkedin.icon%>"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- FOOTER SECTION END -->

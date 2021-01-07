@@ -1,0 +1,89 @@
+{
+  "hero":{
+    "name":{
+      "value": "SABYASACHI KARMAKAR"
+    },
+
+    "tagline":{
+      "value": "• Doctoral Candidate @ IIT Madras •"
+    },
+
+    "github":{
+      "link":"https://github.com/dhrubajyoti98",
+      "icon":"fa-github",
+      "aria":"Visit Github"
+    },
+
+    "linkedin":{
+      "link":"https://www.linkedin.com/in/dhrubajyoti-biswas/",
+      "icon":"fa-linkedin-in",
+      "aria":"Visit Linkedin"
+    },
+
+    "scholar":{
+      "link":"https://scholar.google.com/citations?user=2OR7h7kAAAAJ&hl=en",
+      "icon":"ai-google-scholar",
+      "aria":"Visit Google Scholar"
+    },
+
+    "mail":{
+      "link":"mailto:dhrubajyoti98@physics.iitm.ac.in",
+      "icon":"fa-envelope",
+      "aria":"Send Me An Email"
+    },
+
+    "aboutme" :{
+      "aria":"Go to about me"
+    },
+    
+    "cv":{
+      "link":"https://drive.google.com/file/d/1pDmqyZtTw7QiOCLzVDtpZioT9_SFtdWR/view?usp=sharing",
+      "aria":"View CV"
+    }
+  },
+
+  "footer":{
+    "col1":{
+      "title":"Email"
+    },
+
+    "col2":{
+      "title":"Office",
+      "address":"MSB108 Mechanical Science Block, IIT Madras, Chennai.",
+      "phone": "+91 - 9836705913",
+      "links":{
+        "gmap":{
+          "link":"https://goo.gl/maps/RJT2ytboZJr6NL9e7",
+          "icon":"fa-map-marker-alt",
+          "aria":"View on Map"
+        },
+        "website":{
+          "link":"https://home.iitm.ac.in/sayan/page3.html",
+          "icon":"fa-globe",
+          "aria":"View IITM Website"
+        }
+      }
+    },
+
+    "col3":{
+      "title":"Social",
+      "links":{
+        "instagram":{
+          "link":"https://www.instagram.com/pushhu/",
+          "icon":"fa-instagram",
+          "aria":"Visit Instagram"
+        },
+        "twitter":{
+          "link":"https://twitter.com/djbiswas98",
+          "icon":"fa-twitter",
+          "aria":"Visit Twitter"
+        },
+        "facebook":{
+          "link":"https://www.facebook.com/dhrubajyoti.biswas1",
+          "icon":"fa-facebook",
+          "aria":"Visit Facebook"
+        }
+      }
+    }
+  }
+}
