@@ -9,13 +9,14 @@
   "author": "Sabyasachi",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "0.11.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "academicons": "^1.8.6",
-    "axios": "^0.21.1",
-    "dotenv": "^8.2.0",
-    "prismic-dom": "^2.2.4"
+    "@fortawesome/fontawesome-free": "5.15.1",
+    "academicons": "1.8.6",
+    "axios": "0.21.1",
+    "dotenv": "8.2.0",
+    "html-minifier": "^4.0.0",
+    "prismic-dom": "2.2.4"
   }
 }
