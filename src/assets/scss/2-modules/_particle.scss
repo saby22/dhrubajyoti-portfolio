@@ -15,7 +15,11 @@
     // width: 100%;
     background-color:$bgColor;
     position: relative;
-    padding: 2em 0;
+    padding: 1.6em 0;
+    @include max-width(770px){
+        padding: 1.6em 0 2.8em 0;
+    }
+    
 }
 
 // #particles-js3{
