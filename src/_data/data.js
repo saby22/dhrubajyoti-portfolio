@@ -1,10 +1,28 @@
 /* DO NOT MESS WITH THIS FILE IF YOU DO NOT KNOW WHAT YOU ARE DOING */
+const fs = require('fs');
+const path = require('path');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const prismic = require('prismic-dom');
 dotenv.config();
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 const baseURL = "https://dhrubajyoti98-portfolio.prismic.io/api/v2/documents/search";
+let js = [];
+let css = [];
+
+fs.readdir(path.resolve(__dirname,'../static'), (err, files) => {
+    if(!err){
+        files.forEach(file => {
+            if(file.split(".")[2]==='js')
+                js.push(file);
+            else
+                css.push(file);
+          });
+    }
+    else{
+        console.log(err);
+    }
+});
 
 /*The link resolver function is specific to Prismic */
 const linkResolver = function(doc) {
@@ -160,6 +178,8 @@ module.exports = async ()=>{
         aboutme,
         skills,
         researches,
-        developer
+        developer,
+        js,
+        css
     }
 }

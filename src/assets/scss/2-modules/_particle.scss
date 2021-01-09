@@ -1,0 +1,29 @@
+#tsParticles{
+    height: 100vh;
+    width: 100%;
+    // background-color: #f1f1f1;
+    // background: linear-gradient(to right, #232526, #414345);
+    background: linear-gradient(to right, #000000, #434343);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -100;
+}
+
+#tsParticles2{
+    height: 100vh;
+    // width: 100%;
+    background-color:$bgColor;
+    position: relative;
+}
+
+#particles-js3{
+    // z-index: -200;
+}
+
+#tsParticles3 canvas{
+    width: 100%;
+    height: 100% !important;
+}
+
+

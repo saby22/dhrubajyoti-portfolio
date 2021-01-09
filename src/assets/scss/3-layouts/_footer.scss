@@ -1,0 +1,178 @@
+footer{
+    height: auto;
+    width: 100%;
+    background-color: $footerBG;
+    padding: 2.3em 0;
+
+    .footer-container{
+        // border: 1px solid;s
+        max-width: 1200px;
+        @include min-width(770px){
+            display: flex;
+            justify-content: space-between;
+        }
+        h1{
+            color: $eduColor;
+            font-weight: 500;
+            font-size: 1.5rem;
+            margin-bottom:0.5em;
+            @include min-width(770px){
+                
+                font-size: 1.3rem;
+            }
+        }
+
+        .contact,.office,.social{
+            @include min-width(770px){
+                width: 22%;
+            }
+            // border: 1px solid black;
+            margin-bottom: 2em;
+        }
+
+
+        p,a{
+            color: $footerLinks;
+            font-size: 1.1rem;
+            @include min-width(770px){
+                font-size: 1rem;
+            }
+            font-weight: 300;
+            margin-bottom: 0.25em;
+            line-height: 1.5em;
+        }
+
+        .contact{
+            // border: 1px solid black;
+            ul{
+                // border: 1px solid;
+                list-style: none;
+            }
+            a{
+                // border: 1px solid black;
+                display: block;
+                // width: 100%;
+                word-break: break-all;
+                transition: color 0.2s ease-in-out;
+            }
+
+            li{
+                position: relative;
+                margin-left: 8px;
+            }
+
+            a:hover{
+                color: $eduColor;
+            }
+
+            li::before{
+                content: "";
+                width: 6px;
+                height: 6px;
+                position: absolute;
+                top: 11px;
+                left: -12px;
+                border-radius: 50%;
+                background-color: $eduColor;
+            }
+        }
+
+        i{
+            font-size: 1.4rem;
+            @include min-width(770px){
+                font-size: 1.2rem;
+            }
+            border: 2px solid $footerLinks;
+            padding: 10px;
+            border-radius: 100px;
+            color: $footerLinks;
+            transition: all 0.2s ease-in-out;
+        }
+
+        i:hover{
+            color: $eduColor;
+            background-color:white;
+            border: 2px solid white;
+        }
+
+        .fa-linkedin-in,.fa-instagram{
+            padding-left: 11px;
+            padding-right: 11px;
+        }
+
+        .social-links{
+            // border: 1px solid black;
+            display: inline-block;
+            width: 55%;
+            max-width: 200px;
+            display: flex;
+            justify-content: space-between;
+            @include min-width(770px){
+                min-width: 150px;
+            }
+            
+        }
+
+        .office{
+            // border: 1px solid red;
+            p{
+                width: 60%;
+                max-width: 200px;
+                @include min-width(770px){
+                    width: 100%;
+                    max-width: 100%;
+                    font-size: 1rem;
+                }
+            }
+            .map-view{
+                // border: 1px solid red;
+                display: inline-block;
+                width: auto;
+            }
+            .fa-map-marker-alt{
+                // border: none;
+                // font-size: 1rem;
+                padding-left: 12px;
+                padding-right: 12px;
+                // margin-left: -5px;
+            }
+            .office-links{
+                // border: 1px solid black;
+                margin-top: 0.9em;
+                display: flex;
+                justify-content: space-between;
+                width: 37%;
+                max-width: 90px;
+                @include min-width(770px){
+                    min-width: 90px;
+                }
+                i{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .developed-by{
+
+            @include min-width(770px){
+                width: 22%;
+            }
+            p{
+                max-width: 250px;
+            }
+            
+            .developer-links{
+                // border: 1px solid black;
+                margin-top: 1em;
+                display: flex;
+                justify-content: space-between;
+                width: 37%;
+                max-width: 110px;
+                @include min-width(770px){
+                    min-width: 100px;
+                    width: 35%;
+                }
+            }
+        }
+    }
+}

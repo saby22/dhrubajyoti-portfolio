@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%=title%></title>
+
+    <!-- Stylesheets -->
+    <% if(process.env.ELEVENTY_ENV.trim() === 'production') {%> 
+        <% for(file of data.css) %> 
+            <link rel="stylesheet" href="./static/<%= file %>">
+    <% } %> 
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&amp;display=swap&amp;text=DHRUBAJYOTIBISWASRESEARCHSCHOLAR@IITMADRASABOUTMEGETCV" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Academicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    
 </head>
 <body>
     
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/befeaae48c.js" crossorigin="anonymous" defer></script>
+    
+    <!-- Script -->
+    <% if(process.env.ELEVENTY_ENV.trim() === 'developement') {%> 
+        <script src="./assets/index.js"></script>
+    <% } else {%> 
+        <% for(file of data.js) %> 
+            <script src="./static/<%= file %> " defer></script>
+    <% } %> 
+
+
     <%- content %> 
 
 </body>

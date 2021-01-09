@@ -1,0 +1,22 @@
+button{
+    outline: none;
+    background: $redColor;
+    border: 2px solid $redColor;
+    color: rgb(223, 223, 223);
+    font-family: inherit;
+    font-weight: 500;
+    padding: 0.6em 1.5em;
+    border-radius: 3px;
+    pointer-events: all;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    @include min-width(500px){
+        padding: 0.9em 1.8em;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    @include min-width(900px){
+        padding: 1.2em 2.1em;
+    }
+}

@@ -12,7 +12,7 @@ title : Dhrubajyoti Biswas
 
     <div class="header-icons">
         <a aria-label="<%=hero.github.aria%>" href="<%=hero.github.link%>" target="_blank">
-            <i class="<%=hero.github.icon%>"></i>
+            <i class="fab <%=hero.github.icon%>"></i>
         </a>
         <a aria-label="<%=hero.linkedin.aria%>" href="<%=hero.linkedin.link%>" target="_blank">
             <i class="fab <%=hero.linkedin.icon%>"></i>
@@ -52,7 +52,6 @@ title : Dhrubajyoti Biswas
             <script>
                 const images = document.getElementsByClassName("random-image");
                 const randomNumber = "image-"+ Math.floor(Math.random() * (images.length) + 1);
-                console.log(randomNumber);
                 for(image of images){
                     if(image.id===randomNumber)
                         continue;
