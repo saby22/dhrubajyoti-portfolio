@@ -1,6 +1,8 @@
 const htmlmin = require("html-minifier");
-const env = process.env.ELEVENTY_ENV.trim();
+const rimraf = require('rimraf');
 
+const env = process.env.ELEVENTY_ENV.trim();
+rimraf.sync("dist");
 module.exports = eleventyConfig => {
     
     eleventyConfig.addPassthroughCopy("./src/favicon");
