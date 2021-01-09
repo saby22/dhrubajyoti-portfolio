@@ -12,6 +12,7 @@ let css = [];
 
 fs.readdir(path.resolve(__dirname,'../static'), (err, files) => {
     if(!err){
+        console.log(files);
         files.forEach(file => {
             if(file.split(".")[2]==='js')
                 js.push(file);

@@ -79,7 +79,19 @@ module.exports = {
       }
     ]
   },
-
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          // Bundle imports from the node modules into vendor.js
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+          enforce: true
+        },
+      },
+    },
+  },
   plugins: [
     new MiniCssExtractPlugin({
         filename: 'style.[contenthash].css',
