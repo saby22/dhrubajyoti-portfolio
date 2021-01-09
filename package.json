@@ -8,7 +8,7 @@
     "dev:site": "SET ELEVENTY_ENV=developement && npx @11ty/eleventy --serve --watch",
     "build:assets": "webpack --config webpack.config.prod.js",
     "dev:assets": "SET ELEVENTY_ENV=developement && webpack --config webpack.config.dev.js",
-    "build": "SET ELEVENTY_ENV=production && webpack --config webpack.config.prod.js && npx @11ty/eleventy"
+    "build": "ELEVENTY_ENV=production && webpack --config webpack.config.prod.js && npx @11ty/eleventy"
   },
   "author": "Sabyasachi",
   "license": "ISC",
