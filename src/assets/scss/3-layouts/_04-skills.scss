@@ -1,0 +1,68 @@
+.skills{
+    padding: 1.6em 0;
+    // background-color: rgb(226, 226, 226);
+    h1{
+        display: inline-block;
+        // border: 1px solid;
+        text-align: center;
+        font-weight:500;
+        font-size: 2.2rem;
+        position: relative;
+        margin-bottom: 1.2em;
+        span{
+            color: $eduColor;
+        }
+    }
+
+    h1::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: $eduColor;
+        border-radius: 100px;
+        bottom:-3px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .skill-container{
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .skills-logos{
+            // border: 1px solid;  
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            height:auto;
+            div{
+                width: 15%;
+                max-width: 240px;
+                @include max-width(1050px){
+                    width: 30%;
+                    margin-bottom: 1.6em;
+                    max-width: 237px;
+                }
+                @include max-width(530px){
+                    width: 47%;
+                    margin-bottom: 1.2em;
+                }
+                // border: 1px solid;
+            }
+        }
+
+        img{
+            max-width: 100%;
+            // cursor: pointer;
+            transition: transform 200ms ease-in-out;
+            // border: 1px solid red;
+        }
+
+        img:hover{
+            transform: scale(1.1);
+        }
+    }
+}

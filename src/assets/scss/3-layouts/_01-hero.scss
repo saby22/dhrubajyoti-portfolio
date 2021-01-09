@@ -1,0 +1,125 @@
+.header{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 52%;
+    left: 50%;
+    font-family: $rubik;
+    // border: 1px solid red;
+    width: 80%;
+    pointer-events: none;
+    h1{
+        // border: 1px solid red;
+        color: $greyColor;
+        width: auto;
+        text-align: center;
+        font-weight: 500;
+        font-size: 2.2rem;
+        margin-bottom: 0.2em;
+        @include min-width(500px){
+            font-size: 3rem;
+        }
+
+        @include min-width(900px){
+            font-size: 6rem;
+        }
+    }
+    
+    p{
+        // border: 1px solid black;
+        color: $greyColor;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 30px;
+        width: auto;
+        margin: 0 auto 1em auto;
+
+        @include min-width(355px) {
+            font-size: 1.1rem;
+        }
+
+        @include min-width(371px) {
+            font-size: 1.2rem;
+        }
+
+        @include min-width(500px){
+            font-size: 1.5rem;
+        }
+
+        @include min-width(900px){
+            font-size: 2.5rem;
+        }
+    }
+
+    &-icons{
+        // border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+        max-width: 275px;
+        margin: 0 auto 1.6em auto;
+
+        i{
+            color: $greyColor;
+            font-size: 1.2rem;
+            border: 2px solid $greyColor;
+            border-radius: 100px;
+            padding: 8px;
+            transition: all 0.2s ease-in-out;
+            // width: 60px;
+            // height: 60px;
+            pointer-events:all;
+            cursor: pointer;
+            @include min-width(500px){
+                font-size: 2rem;
+                padding: 10px;
+            }
+        }
+
+        i:hover{
+            color: $redColor;
+            background-color: $greyColor;
+        }
+
+        .fa-linkedin-in{
+            padding-left: 9px;
+            padding-right: 9px;
+            @include min-width(500px){
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+        .ai-google-scholar{
+            padding-left: 10px;
+            padding-right: 10px;
+            @include min-width(500px){
+                padding-left: 13px;
+                padding-right: 13px;
+            }
+        }
+    }
+
+    .button-group{
+        // border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        min-width: 200px;
+        max-width: 210px;
+        margin: 0 auto;
+        // border: 1px solid red;
+        .get-cv-button{
+            background: transparent;
+            border: 2px solid $greyColor;
+            color: $greyColor;
+            font-weight: 400;
+        }
+        
+        @include min-width(500px){
+            max-width: 250px;
+        }
+
+        @include min-width(900px){
+            max-width: 265px;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.about-me-section{
+    padding: 2em 0 3.5em 0;
+
+    .about-me-header{
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1.5em;
+        h1{
+            display: inline-block;
+            // border: 1px solid;
+            text-align: center;
+            font-weight:500;
+            font-size: 2.2rem;
+            margin-bottom: 0.3em;
+            position: relative;
+            span{
+                color: $eduColor;
+            }
+        }
+    
+        h1::after{
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            background-color: $eduColor;
+            border-radius: 100px;
+            bottom:-3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p{
+            font-weight: 300;
+            color: grey;
+            font-size: 0.9rem;
+            max-width: 800px;
+            @include min-width(430px){
+                font-size: 1.1rem;
+            }
+            // margin-bottom: 1em;
+        }
+    }
+
+    .about-me-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // border: 1px solid;
+        @include min-width(770px){
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        img{
+            width: 60%;
+            max-width: 250px;
+            border: 4px solid $eduColor;
+            border-radius: 50%;
+            box-shadow: 0px 0px 31px -10px rgba(0,0,0,0.75);
+            margin-bottom: 2em;
+            @include min-width(770px){
+                margin-bottom: 0;
+            }
+            // @include min-width()
+        }
+        p{
+            text-align: center;
+            color: gray;
+            font-weight: 500;
+            // border: 1px solid;
+            @include min-width(430px){
+                font-size: 1.2rem;
+            }
+            @include min-width(770px){
+                width:60%;
+                text-align: left;
+            }
+            @include min-width(820px){
+                width:63%;
+            }
+            @include min-width(990px){
+                width:70%;
+            }
+            a{
+                color: $eduColor;
+            }
+        }
+    }
+}
