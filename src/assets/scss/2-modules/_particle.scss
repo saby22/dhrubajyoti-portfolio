@@ -13,7 +13,8 @@
 #tsParticles2{
     // height: 100vh;
     // width: 100%;
-    background-color:$bgColor;
+    margin-top: calc((100vh - 15px)*-1);
+    background-color:transparent;
     position: relative;
     padding: 1.6em 0;
     @include max-width(770px){
@@ -32,3 +33,11 @@
 }
 
 
+#ts-2{
+    height: 100vh;
+    background-color:$bgColor;
+    position: sticky;
+    top: 0;
+    z-index: -100;
+    top: 0;
+}

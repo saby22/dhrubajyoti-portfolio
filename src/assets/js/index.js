@@ -9,3 +9,11 @@ tsParticles
   .catch((error) => {
     console.error(error);
   })
+
+tsParticles
+  .loadJSON("ts-2", "./tsparticles/education-particles.json")
+  .then((container) => {
+  })
+  .catch((error) => {
+    console.error(error);
+  })
