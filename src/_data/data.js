@@ -59,7 +59,7 @@ const getAboutMe = async ()=>{
         
         // Convert each individual image to HTML
         for(let i=1;i<=Object.keys(response).length-1;i++){
-            aboutme.push(`<img src="${response['image'+i].url}" alt="${response['image'+i].alt}" loading="lazy" class="random-image" id="image-${i}">`)
+            aboutme.push(`<img src="${response['image'+i].url}" width="250px" height="250px" alt="${response['image'+i].alt}" loading="lazy" class="random-image" id="image-${i}">`)
         }
         console.log(aboutme);
         return aboutme;
