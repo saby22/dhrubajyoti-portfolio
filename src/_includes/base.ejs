@@ -28,7 +28,6 @@
     <!-- Script -->
     <% if(process.env.ELEVENTY_ENV.trim() === 'developement') {%> 
         <script src="./assets/index.js" defer></script>
-        <script src="./assets/vendor.js"defer></script>
     <% } else {%> 
         <% for(file of data.js){ %> 
             <script src="./static/<%= file %> " defer></script>

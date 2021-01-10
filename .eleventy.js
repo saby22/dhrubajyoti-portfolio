@@ -6,6 +6,7 @@ rimraf.sync("dist");
 module.exports = eleventyConfig => {
     
     eleventyConfig.addPassthroughCopy("./src/favicon");
+    eleventyConfig.addPassthroughCopy("./src/tsparticles");
     if(env === 'production'){
         eleventyConfig.addPassthroughCopy("./src/static");
         eleventyConfig.addTransform('htmlmin', (content, outputPath) => {

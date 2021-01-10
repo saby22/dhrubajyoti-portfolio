@@ -8,7 +8,7 @@
     "dev:site": "SET ELEVENTY_ENV=developement && npx @11ty/eleventy --serve --watch",
     "build:assets": "webpack --config webpack.config.prod.js",
     "dev:assets": "SET ELEVENTY_ENV=developement && webpack --config webpack.config.dev.js",
-    "build": "export ELEVENTY_ENV=production && webpack --config webpack.config.prod.js && npx @11ty/eleventy"
+    "build": "SET ELEVENTY_ENV=production && webpack --config webpack.config.prod.js && npx @11ty/eleventy"
   },
   "author": "Sabyasachi",
   "license": "ISC",
@@ -34,6 +34,7 @@
     "jump.js": "^1.0.2",
     "prismic-dom": "2.2.4",
     "resolve-url-loader": "^3.1.2",
-    "style-loader": "^2.0.0"
+    "style-loader": "^2.0.0",
+    "tsparticles": "^1.18.11"
   }
 }
