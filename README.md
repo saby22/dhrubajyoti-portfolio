@@ -1,3 +1,3 @@
 # Info
 
-This website was developed using a Static Site Generator called [Eleventy](https://https://www.11ty.dev/) 
+This website was developed using a Static Site Generator called [Eleventy](https://https://11ty.dev/) 
